@@ -21,11 +21,21 @@ function Default (){
     
     const Delete = () =>{
         // console.log("hii")
-        let newtext=text.charAt(-1);
+        let newtext="";
         settext(newtext)
         // if (newtext==0);
         // console.log("default");
     }
+
+    const removespace = () =>{
+       
+        // let newtext="";
+        // settext(newtext)
+        const newtext = text.replace(/\s/g, ' ');
+        settext(newtext);
+        
+    }
+
     const handleonchange = (event) =>{
         // console.log("onchange")
         settext(event.target.value)
@@ -44,9 +54,13 @@ function Default (){
   <button className="btn btn-primary" onClick={handleupclick}>Convert To Upper Case</button>
   <button className="btn btn-primary mx-5" onClick={handlelowclick}>Convert To Lower Case</button>
   <button className="btn btn-warning mx-5" onClick={slice}>Convert To Slice String</button>
-  <button className="btn btn-danger mx-5" onClick={Delete}>Delete</button>
+  <button className="btn btn-danger mx-5" onClick={Delete}>Clear</button>
+  <button className="btn btn-success mx-5" onClick={removespace}>Remove Extra Space</button>
   <h1 className='my-5'>Summary</h1>
   <p>{text.length} characters {text.split(' ').length} words</p>
+  <p> {0.008 * text.split(' ').length} Minutes to read </p>
+  <h1>Preview</h1>
+  <p>{text}</p>
   
 </div>
 )

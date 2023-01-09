@@ -18,7 +18,7 @@ function App() {
   return (
     <>
 <Router>
-    <Header head="i am Hammad" title="weather app"></Header>
+    <Header head="i am Hammad" title="Text App"></Header>
     {/* <h1 className='hid'>hello</h1>
     <div>{12 + 1}</div> */}
    <Routes>
